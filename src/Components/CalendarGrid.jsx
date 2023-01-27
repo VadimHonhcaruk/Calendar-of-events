@@ -13,7 +13,7 @@ export default function CalendarGrid({ startDay, today }) {
                 <div key={dayItem.unix()} className={`${classes.cell} ${isCurrentDay(dayItem) ? classes.cellCurrentDay : null} ${isCurrentMonth(dayItem) ? '' : classes.cellNotCurrentMonth}`}>
                     <div className={classes.cellHeader}>
                         <div>{dayItem.format('D')}</div>
-                        <div>{dayItem.format('ddd')}</div>
+                        <div>{dayItem.format('dd')}</div>
                     </div>
                     <div className={classes.eventsList}></div>
                 </div>

@@ -1,4 +1,3 @@
-import './App.css';
 import Start from './Components/Start';
 import React, { useState } from 'react';
 import MainContent from './Components/MainContent';

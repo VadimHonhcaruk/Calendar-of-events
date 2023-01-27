@@ -1,6 +1,5 @@
 .header {
   height: 15vh;
-  border-bottom: 1px solid #af7eeb50;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,6 +7,8 @@
 
 .title {
   font-size: 40px;
+  font-weight: bolder;
+  color: #6a5a7a;
   width: 35%;
   display: flex;
   align-items: center;
@@ -22,4 +23,34 @@
 .month {
   width: 80%;
   text-align: center;
+}
+
+.button {
+  background-color: #af7eeb;
+  padding: 2% 4%;
+  border-radius: 15%;
+  border: none;
+  margin: 2%;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.datePicker {
+  display: flex;
+  width: 20%;
+}
+
+.button:hover {
+  filter: drop-shadow(0 0 2px rgb(110, 109, 109));
+  background-color: #9152df;
+}
+
+.addEvent {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

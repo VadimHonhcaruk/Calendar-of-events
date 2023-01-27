@@ -1,0 +1,24 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.699);
+  animation-duration: 300ms;
+}
+
+.modalWindow {
+  width: 30vw;
+  height: 70vh;
+  border-radius: 6%;
+  background-color: #e3e9ff;
+  border: 1px solid #9152df;
+  filter: drop-shadow(0 0 10px #9152df);
+}

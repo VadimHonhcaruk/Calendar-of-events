@@ -6,7 +6,22 @@ import moment from 'moment/moment';
 
 export default function MainContent(props) {
     moment.updateLocale('en', { week: { dow: 1 } });
-    const [today, setToday] = useState(moment());
+    const [today, setToday] = useState(() => {
+        const todaymoment = moment();
+        if (localStorage.getItem('today')) {
+            const localStorageToday = JSON.parse(localStorage.getItem('today'));
+            todaymoment.set('year', localStorageToday.slice(0, 4));
+            todaymoment.set('month', localStorageToday.slice(5, 7) - 1);
+        }
+        return todaymoment;
+    });
+
+    useEffect(() => {
+        localStorage.setItem('today', JSON.stringify(today));
+    }, [today]);
+
+    const [eventList, setEventList] = useState(localStorage.getItem('eventList') ? JSON.parse(localStorage.getItem('eventList')) : []);
+
     const startDay = today.clone().startOf('month').startOf('week');
     const [dateFromDatePicker, setDateFromDatePicker] = useState(today.format('YYYY-MM-DD'));
     const setNewDateFromDatePicker = () => {
