@@ -1,6 +1,8 @@
 .mainContent {
   opacity: 0;
   transition: all ease 3s;
+  margin: auto;
+  width: 80%;
 }
 
 .mainContentShow {

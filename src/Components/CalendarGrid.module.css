@@ -1,0 +1,37 @@
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 1px;
+  background-color: #af7eeb;
+  border: 1px solid #af7eeb;
+}
+
+.cell {
+  height: 8vw;
+  background-color: aliceblue;
+  padding: 5%;
+  font-size: 14px;
+}
+
+.cellCurrentDay {
+  border: #af7eeb double;
+  background-color: rgb(227, 237, 246);
+}
+
+.cellNotCurrentMonth {
+  background-color: rgb(255, 255, 255);
+  color: #47454588;
+}
+
+.cellHeader {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: centerS;
+  padding: 2%;
+}
+
+.eventsList {
+  padding: 2%;
+}

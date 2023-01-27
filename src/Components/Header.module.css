@@ -1,0 +1,25 @@
+.header {
+  height: 15vh;
+  border-bottom: 1px solid #af7eeb50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 40px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.changer {
+  cursor: pointer;
+}
+
+.month {
+  width: 80%;
+  text-align: center;
+}
