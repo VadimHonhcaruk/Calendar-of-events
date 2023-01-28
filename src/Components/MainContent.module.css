@@ -13,3 +13,9 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 900px) {
+  .mainContent {
+    width: 90%;
+  }
+}

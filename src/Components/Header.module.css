@@ -53,3 +53,127 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 980px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .button {
+    font-size: 12px;
+  }
+
+  .dateInput {
+    font-size: 11px;
+    padding: 0;
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 880px) {
+  .dateInput {
+    font-size: 10px;
+  }
+
+  .datePicker {
+    width: 30%;
+  }
+}
+
+@media (max-width: 880px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    height: 10vh;
+  }
+  .title {
+    width: 50%;
+  }
+
+  .button {
+    margin: 1%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 560px) {
+  .dateInput {
+    font-size: 9px;
+  }
+
+  .datePicker {
+    width: 40%;
+  }
+}
+
+@media (max-width: 530px) {
+  .title {
+    font-size: 17px;
+  }
+
+  .button {
+    margin: 1%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 15px;
+  }
+
+  .button {
+    margin: none;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 428px) {
+  .dateInput {
+    font-size: 8px;
+  }
+
+  .datePicker {
+    width: 40%;
+  }
+}
+
+@media (max-width: 370px) {
+  .title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 340px) {
+  .dateInput {
+    font-size: 8px;
+  }
+
+  .datePicker {
+    width: 45%;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 11px;
+  }
+
+  .button {
+    font-weight: 500;
+  }
+}
