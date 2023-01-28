@@ -31,6 +31,10 @@ export default function MainContent() {
         localStorage.setItem('eventsList', JSON.stringify(eventsList));
     }, [eventsList]);
 
+    // useEffect(() => {
+    //     fetch('').then(res => res.json()).then(res => setEventsList(res));
+    // }, [])
+
     const startDay = today.clone().startOf('month').startOf('week');
     const [dateFromDatePicker, setDateFromDatePicker] = useState(today.format('YYYY-MM-DD'));
     const setNewDateFromDatePicker = () => {
