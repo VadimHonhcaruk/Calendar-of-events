@@ -21,4 +21,74 @@
   background-color: #e3e9ff;
   border: 1px solid #9152df;
   filter: drop-shadow(0 0 10px #9152df);
+  padding: 2%;
+}
+
+.addEventTitle {
+  font-size: 35px;
+}
+
+.addEventHeader {
+  font-weight: 500;
+  color: #331854;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addEventClose {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.addEventCreate {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 0;
+  color: rgb(158, 159, 159);
+  justify-content: space-around;
+}
+
+.input {
+  margin-top: 2%;
+  display: block;
+  font-family: inherit;
+  font-size: 17px;
+  width: 60%;
+  height: 40px;
+  color: #331854;
+  background-color: #e3e9ff;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.input::placeholder {
+  color: rgb(95, 98, 98);
+}
+
+.input:focus {
+  border-color: #000000;
+  outline: 0;
+}
+
+.inputDesc {
+  height: 60px;
+  resize: none;
+}
+
+.button {
+  background-color: #af7eeb;
+  padding: 2% 4%;
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.button:hover {
+  filter: drop-shadow(0 0 2px rgb(110, 109, 109));
+  background-color: #9152df;
 }
