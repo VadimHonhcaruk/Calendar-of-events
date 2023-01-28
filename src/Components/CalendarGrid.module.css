@@ -10,8 +10,9 @@
 .cell {
   height: 8vw;
   background-color: aliceblue;
-  padding: 5%;
-  font-size: 14px;
+  padding: 10%;
+  font-size: 80%;
+  overflow: hidden;
 }
 
 .cellCurrentDay {
@@ -28,10 +29,19 @@
   height: 10%;
   display: flex;
   justify-content: space-between;
-  align-items: centerS;
-  padding: 2%;
+  align-items: center;
 }
 
 .eventsList {
-  padding: 2%;
+  margin-top: 5%;
+  overflow: scroll;
+  height: 100%;
+}
+
+.event {
+  margin-bottom: 10px;
+  background-color: #af7eeb13;
+  border-bottom: 1px solid#af7eeb;
+  width: 100%;
+  cursor: pointer;
 }

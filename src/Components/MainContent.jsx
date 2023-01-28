@@ -5,9 +5,10 @@ import classes from './MainContent.module.css';
 import moment from 'moment/moment';
 import Modal from './Modal';
 
-export default function MainContent(props) {
+export default function MainContent() {
 
     const [modalVisible, setModalVisible] = useState(false);
+    const [editing, setEditing] = useState(false);
 
     moment.updateLocale('en', { week: { dow: 1 } });
     const [today, setToday] = useState(() => {
@@ -20,17 +21,16 @@ export default function MainContent(props) {
         return todaymoment;
     });
 
-    const [eventList, setEventList] = useState(localStorage.getItem('eventList') ? JSON.parse(localStorage.getItem('eventList')) : []);
+    const [eventsList, setEventsList] = useState(localStorage.getItem('eventsList') ? JSON.parse(localStorage.getItem('eventsList')) : []);
 
     useEffect(() => {
         localStorage.setItem('today', JSON.stringify(today));
     }, [today]);
 
     useEffect(() => {
-        localStorage.setItem('eventList', JSON.stringify(eventList));
-    }, [eventList]);
+        localStorage.setItem('eventsList', JSON.stringify(eventsList));
+    }, [eventsList]);
 
-    console.log(eventList);
     const startDay = today.clone().startOf('month').startOf('week');
     const [dateFromDatePicker, setDateFromDatePicker] = useState(today.format('YYYY-MM-DD'));
     const setNewDateFromDatePicker = () => {
@@ -65,14 +65,14 @@ export default function MainContent(props) {
         }
     }
 
+    const [currentEvent, setCurrentEvent] = useState({});
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
 
-
     return (
-        <div className={`${classes.mainContent} ${props.startVisible ? '' : classes.mainContentShow}`}>
+        <div className={classes.mainContent}>
             <Header
                 previous={previous}
                 next={next} today={today}
@@ -80,8 +80,9 @@ export default function MainContent(props) {
                 setDateFromDatePicker={setDateFromDatePicker}
                 setNewDateFromDatePicker={setNewDateFromDatePicker}
                 setModalVisible={setModalVisible}
+                setEditing={setEditing}
             />
-            <CalendarGrid startDay={startDay} today={today} />
+            <CalendarGrid setTitle={setTitle} setDescription={setDescription} setDate={setDate} setTime={setTime} startDay={startDay} today={today} eventsList={eventsList} setCurrentEvent={setCurrentEvent} setModalVisible={setModalVisible} setEditing={setEditing} />
             {modalVisible ? <Modal
                 setModalVisible={setModalVisible}
                 title={title}
@@ -92,8 +93,12 @@ export default function MainContent(props) {
                 setDate={setDate}
                 time={time}
                 setTime={setTime}
-                eventList={eventList}
-                setEventList={setEventList}
+                eventList={eventsList}
+                setEventList={setEventsList}
+                currentEvent={currentEvent}
+                setCurrentEvent={setCurrentEvent}
+                setEditing={setEditing}
+                editing={editing}
             />
                 : null}
         </div>

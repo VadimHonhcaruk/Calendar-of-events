@@ -7,8 +7,8 @@ function App() {
   const [startVisible, setStartVisible] = useState(true);
   return (
     <div className="App">
-      {startVisible ? <Start startVisible={startVisible} setStartVisible={setStartVisible} /> : <></>}
-      <MainContent startVisible={startVisible} />
+      {startVisible ? <Start startVisible={startVisible} setStartVisible={setStartVisible} /> : null}
+      {startVisible ? null : <MainContent />}
     </div>
   );
 }

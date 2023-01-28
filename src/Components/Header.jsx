@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './Header.module.css';
 
-export default function Header({ previous, next, today, dateFromDatePicker, setDateFromDatePicker, setNewDateFromDatePicker, setModalVisible }) {
+export default function Header({ previous, next, today, dateFromDatePicker, setDateFromDatePicker, setNewDateFromDatePicker, setModalVisible, setEditing }) {
 
     return (
         <header className={classes.header}>
@@ -11,7 +11,7 @@ export default function Header({ previous, next, today, dateFromDatePicker, setD
                 <div className={classes.changer} onClick={next}>&gt;</div>
             </div>
             <div className={classes.addEvent}>
-                <button type="button" className={classes.button} onClick={(event) => { event.preventDefault(); setModalVisible(true) }}>Add event</button>
+                <button type="button" className={classes.button} onClick={(event) => { event.preventDefault(); setModalVisible(true); setEditing(false) }}>Add event</button>
             </div>
             <div className={classes.datePicker}>
                 <input type="date" value={dateFromDatePicker} onChange={(event) => setDateFromDatePicker(event.target.value)} onFocus={e => e.target.blur()} />
